@@ -1,0 +1,30 @@
+version: 2.1
+
+orbs:
+  codecov: codecov/codecov@1.0.5
+
+jobs:
+  test:
+    docker:
+      - image: debian:stretch
+
+    steps:
+      - checkout
+
+      - run:
+          name: Greeting
+          command: echo Hello, world.
+
+      - run:
+          name: Print the Current Time
+          command: date
+
+workflows:
+  version: 2
+  test-publish:
+    jobs:
+      - test:
+          filters:
+            tags:
+              only: /^v[0-9]+(\.[0-9]+)*/
+
