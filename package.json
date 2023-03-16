@@ -12,6 +12,6 @@
     "commander": "4.0.1",
     "mocha": "6.2.1",
     "ts-node": "8.5.4",
-    "typescript": "3.7.1-rc"
+    "typescript": "4.9.5"
   }
 }
