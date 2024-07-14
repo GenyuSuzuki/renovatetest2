@@ -6,7 +6,7 @@ orbs:
 jobs:
   test:
     docker:
-      - image: debian:stretch
+      - image: debian:bookworm
 
     steps:
       - checkout
